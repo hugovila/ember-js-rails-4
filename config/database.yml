@@ -27,8 +27,8 @@
 
 common: &common
   adapter: postgresql
-  password:
-  host: localhost
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *common
@@ -41,4 +41,3 @@ test:
 production:
   <<: *common
   database: em_production
-
